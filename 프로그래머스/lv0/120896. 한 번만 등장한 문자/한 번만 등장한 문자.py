@@ -1,5 +1,4 @@
 def solution(s):
-    data = []
     answer = ''
 
     for i in s:
