@@ -1,13 +1,15 @@
 n = int(input())
-AtmList = list(map(int, input().split()))
-AtmList.sort()
-# 과거(n) + 현재(n)
-number = 0
+data = list(map(int, input().split()))
+new_data = []
 result = 0
+result_data = []
+for i in enumerate(data):
+    new_data.append(i)
 
-for i in range(n):
-    number += AtmList[i]
-    # print('number의 값: ', number)
-    result += number
+new_data = sorted(new_data, key=lambda x:x[1])
 
-print(result)
+for j in range(len(new_data)):
+    result += new_data[j][1]
+    result_data.append(result)
+    
+print(sum(result_data))
