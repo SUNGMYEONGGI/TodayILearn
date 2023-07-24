@@ -4,11 +4,11 @@ n = int(sys.stdin.readline())
 data = list(map(int, sys.stdin.readline().split()))
 data.sort()
 
-money = 1
+weight = 1
 
 for i in data:
-    if money < i:
+    if weight < i:
         break
-    money += i
+    weight += i
 
-print(money)
+print(weight)
