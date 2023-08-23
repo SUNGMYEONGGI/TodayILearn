@@ -1,15 +1,15 @@
-N, K = map(int, input().split())
-result = 0
-coin_list = []
+n, m = map(int, input().split())
+data = []
+answer = 0
 
-for _ in range(N):
-    won = int(input())
-    coin_list.append(won)
+for _ in range(n):
+    money = int(input())
+    data.append(money)
 
-for i in sorted(coin_list, reverse=True):
-    if K == 0:
-        break
-    result += K//i
-    K %= i
 
-print(result)
+for i in reversed(data):
+    if m//i > 0:
+        answer += m//i
+    m %= i
+
+print(answer)
