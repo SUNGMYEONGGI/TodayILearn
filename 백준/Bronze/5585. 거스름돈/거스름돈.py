@@ -1,10 +1,14 @@
-K = int(input())
-price = 1000 - K
-Yen_list = [500, 100, 50, 10, 5, 1]
-result = 0
+credit = [500, 100, 50, 10, 5, 1]
 
-for yen in Yen_list:
-    result += price // yen
-    price %= yen
+n = int(input())
+remain_money = 1000-n
+count = 0
 
-print(result)
+for i in credit:
+    if remain_money == 0:
+        break
+    if remain_money >= i:
+        count += (remain_money//i)
+        remain_money -= i*(remain_money//i)
+
+print(count)
